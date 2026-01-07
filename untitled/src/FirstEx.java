@@ -9,8 +9,15 @@ public class FirstEx {
         return Integer.toString(a) + b;
     }
 
-    public static String insertInArray(String[] a, String b){
-        return a[0] + a[1] + a[2] + b + a[3] + a[4];
+    public static String[] insertInArray(String[] a, String b){
+        String[] newArray = new String[a.length+1];
+        newArray[0]= a[0];
+        newArray[1] = a[1];
+        newArray[2] = a[2];
+        newArray[3] = b;
+        newArray[4] = a[3];
+        newArray[5] = a[4];
+        return newArray;
     }
 
 
@@ -32,6 +39,6 @@ public class FirstEx {
         words[3] = "the ";
         words[4] = "Sea ";
         String insert = "to ";
-        System.out.println(insertInArray(words, insert));
+        System.out.println(Arrays.toString(insertInArray(words, insert)));
     }
 }
